@@ -1,4 +1,4 @@
-# node-starter-test
+# MA Api
 
 ## Install modules
 npm install
