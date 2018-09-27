@@ -17,7 +17,7 @@ let ClientSchema = new Schema({
     phone: {type: String, required: false, max: 30},
     username: {type: String, unique: true, trim: true, required: true, max: 30},
     password: {type: String, required: true, max: 30},
-    token: {type: String, max:300}
+    token: {type: String}
 })
 
 // Export model

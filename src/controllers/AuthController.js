@@ -27,7 +27,7 @@ module.exports = {
 
                 await data.update({token})
 
-                res.json({token: token})
+                res.json({status: true,token: token})
 
             }
             else {
