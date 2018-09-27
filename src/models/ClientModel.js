@@ -12,11 +12,12 @@ const Schema = mongoose.Schema
 let ClientSchema = new Schema({
     first_name: {type: String, required: true, max: 30},
     last_name: {type: String, required: true, max: 30},
-    email: {type: String, required: false, max: 50},
+    email: {type: String, unique: true, required: false, trim: true},
     country: {type: String, required: false, max: 30},
     phone: {type: String, required: false, max: 30},
-    username: {type: String, required: false, max: 30},
-    password: {type: String, required: false, max: 30}
+    username: {type: String, unique: true, trim: true, required: true, max: 30},
+    password: {type: String, required: true, max: 30},
+    token: {type: String, max:300}
 })
 
 // Export model
