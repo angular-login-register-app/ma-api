@@ -24,10 +24,11 @@ module.exports = {
             if (data) {
 
                 let token = await jwt.sign({client: data}, 'secretkey')
-
                 await data.update({token})
 
-                res.json({status: true,token: token})
+                let clientData = (({ first_name, last_name, email}) => ({first_name, last_name, email}))(data)
+
+                res.json({status: true,token: token, client: clientData})
 
             }
             else {
